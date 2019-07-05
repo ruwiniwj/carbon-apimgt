@@ -43,6 +43,7 @@ import json2yaml from 'json2yaml';
 import SwaggerParser from 'swagger-parser';
 
 import ResourceNotFound from '../../../Base/Errors/ResourceNotFound';
+import Configurations from '../../../../../../../site/public/theme/defaultTheme';
 
 const EditorDialog = React.lazy(() => import('./SwaggerEditorDrawer'));
 
@@ -135,7 +136,7 @@ class APIDefinition extends React.Component {
                 if (status === 404) {
                     this.setState({ notFound: true });
                 } else if (status === 401) {
-                    window.location = '/publisher-new/services/auth/login';
+                    window.location = '/' + Configurations.context + '/services/auth/login';
                 }
             });
     }

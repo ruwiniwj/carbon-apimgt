@@ -41,6 +41,7 @@ import LaunchIcon from '@material-ui/icons/Launch';
 import { Link } from 'react-router-dom';
 import Grow from '@material-ui/core/Grow';
 import Slide from '@material-ui/core/Slide';
+import Configurations from '../../../../../../../site/public/theme/defaultTheme';
 
 /**
  * API Details Endpoint page component
@@ -458,7 +459,7 @@ class EndpointDetail extends Component {
                                                 <Button
                                                     component='a'
                                                     target='_blank'
-                                                    href='/publisher-new/endpoints'
+                                                    href={'/' + Configurations.context + '/endpoints'}
                                                     size='small'
                                                     className={classes.viewInStoreLauncher}>
                                                     <LaunchIcon />

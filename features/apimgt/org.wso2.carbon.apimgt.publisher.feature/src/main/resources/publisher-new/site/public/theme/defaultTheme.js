@@ -1,4 +1,5 @@
 const Configurations = {
+    context: 'publisher-new',
     themes: {
         light: {
             palette: {
@@ -42,9 +43,13 @@ const Configurations = {
                 logo: '/publisher-new/site/public/images/logo.png',
                 backgroundImage: '/publisher-new/site/public/images/back-light.png',
                 title: 'WSO2 APIM Publisher',
-                defaultApiView: 'grid', // Sets the default view for the api listing page ( Other values available = 'list' )
-                showApiHelp: false, // API detials page has a right hand side panel showing it's related help. Set this to false if you want to hide it.
-                leftMenu: 'icon left', //  other values ('icon top', 'icon left', 'no icon', 'no text')
+                // Sets the default view for the api listing page ( Other values available = 'list' )
+                defaultApiView: 'grid',
+                // API detials page has a right hand side panel showing it's related help. Set this to false if you
+                // want to hide it.
+                showApiHelp: false,
+                //  other values ('icon top', 'icon left', 'no icon', 'no text')
+                leftMenu: 'icon left',
                 leftMenuIconSize: 24,
                 leftMenuIconMainSize: 52,
                 leftMenuTextStyle: 'uppercase',
@@ -116,9 +121,13 @@ const Configurations = {
                 logo: '/publisher-new/site/public/images/logo.png',
                 backgroundImage: '/publisher-new/site/public/images/back-light.png',
                 title: 'WSO2 APIM Publisher',
-                defaultApiView: 'grid', // Sets the default view for the api listing page ( Other values available = 'list' )
-                showApiHelp: false, // API detials page has a right hand side panel showing it's related help. Set this to false if you want to hide it.
-                leftMenu: 'icon left', //  other values ('icon top', 'icon left', 'no icon', 'no text')
+                // Sets the default view for the api listing page ( Other values available = 'list' )
+                defaultApiView: 'grid',
+                // API detials page has a right hand side panel showing it's related help. Set this to false if you
+                // want to hide it.
+                showApiHelp: false,
+                //  other values ('icon top', 'icon left', 'no icon', 'no text')
+                leftMenu: 'icon left',
                 leftMenuIconSize: 24,
                 leftMenuIconMainSize: 52,
                 leftMenuTextStyle: 'uppercase',

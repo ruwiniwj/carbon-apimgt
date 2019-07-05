@@ -27,6 +27,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Api from 'AppData/api';
+import Configurations from '../../../../../../../site/public/theme/defaultTheme';
 
 function RenderMethodBase(props) {
     const { theme, method } = props;
@@ -85,7 +86,7 @@ class Resources extends React.Component {
                 if (status === 404) {
                     this.setState({ notFound: true });
                 } else if (status === 401) {
-                    window.location = '/publisher-new/services/auth/login';
+                    window.location = '/' + Configurations.context + '/services/auth/login';
                 }
             });
     }

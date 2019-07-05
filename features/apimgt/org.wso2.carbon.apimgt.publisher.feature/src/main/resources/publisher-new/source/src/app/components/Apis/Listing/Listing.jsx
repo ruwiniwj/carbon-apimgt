@@ -26,6 +26,7 @@ import SampleAPI from './SampleAPI/SampleAPI';
 import CardView from './CardView/CardView';
 import TableView from './TableView/TableView';
 import TopMenu from './components/TopMenu';
+import Configurations from '../../../../../../site/public/theme/defaultTheme';
 
 const styles = theme => ({
     content: {
@@ -75,7 +76,7 @@ class Listing extends React.Component {
                 if (status === 404) {
                     this.setState({ notFound: true });
                 } else if (status === 401) {
-                    window.location = '/publisher-new/services/auth/login';
+                    window.location = '/' + Configurations.context + '/services/auth/login';
                 }
             });
     }

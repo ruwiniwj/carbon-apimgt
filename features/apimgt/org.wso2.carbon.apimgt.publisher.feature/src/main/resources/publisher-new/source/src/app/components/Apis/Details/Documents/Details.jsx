@@ -37,6 +37,7 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import Input from '@material-ui/core/Input';
 import { Link } from 'react-router-dom';
+import Configurations from '../../../../../../../site/public/theme/defaultTheme';
 
 /**
  * API Details Document page component
@@ -132,7 +133,7 @@ class Details extends React.Component {
                 if (status === 404) {
                     this.setState({ notFound: true });
                 } else if (status === 401) {
-                    window.location = '/publisher-new/services/auth/login';
+                    window.location = '/' + Configurations.context + '/services/auth/login';
                 }
             });
     }

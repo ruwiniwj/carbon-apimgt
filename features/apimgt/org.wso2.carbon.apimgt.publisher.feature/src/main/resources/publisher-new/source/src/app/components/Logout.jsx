@@ -22,6 +22,7 @@ import Alert from 'AppComponents/Shared/Alert';
 import PropTypes from 'prop-types';
 
 import AuthManager from 'AppData/AuthManager';
+import Configurations from '../../../../site/public/theme/defaultTheme';
 
 /**
  *
@@ -73,7 +74,7 @@ class Logout extends Component {
     render() {
         const { logoutSuccess } = this.state;
         if (logoutSuccess) {
-            window.location = '/publisher-new/services/auth/login';
+            window.location = '/' + Configurations.context + '/services/auth/login';
         }
         return logoutSuccess;
     }

@@ -21,6 +21,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import Footer from 'AppComponents/Base/Footer/Footer';
+import Configurations from '../../../../../site/public/theme/defaultTheme';
 
 const styles = theme => ({
     appBar: {
@@ -123,7 +124,7 @@ class AppErrorBoundary extends React.Component {
                         <Toolbar className={classes.toolbar}>
                             <div className={classes.errorDisplay} style={{ width: '100%' }}>
                                 <div className={classes.errorDisplayContent}>
-                                    <a href='/publisher-new'>
+                                    <a href={'/' + Configurations.context}>
                                         <img src={theme.custom.logo} alt={theme.custom.title} />
                                     </a>
                                 </div>
@@ -134,12 +135,12 @@ class AppErrorBoundary extends React.Component {
                     <div className={classes.errorDisplay}>
                         <div className={classes.errorDisplayContent}>
                             <div className={classes.errorTitle}>
-                                <img src='/publisher-new/site/public/images/robo.png' alt='OOPS' />
+                                <img src={'/' + Configurations.context + '/site/public/images/robo.png'} alt='OOPS' />
                                 <Typography variant='h2' gutterBottom>
                                     Something went wrong
                                 </Typography>
                             </div>
-                            <a href='/publisher-new/apis/'>
+                            <a href={'/' + Configurations.context + '/apis/'}>
                                 <h3 className={classes.link}>API Listing</h3>
                             </a>
                         </div>
