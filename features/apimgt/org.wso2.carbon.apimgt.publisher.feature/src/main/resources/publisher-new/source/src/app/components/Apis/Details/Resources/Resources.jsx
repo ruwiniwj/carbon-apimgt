@@ -45,7 +45,6 @@ import ResourceNotFound from '../../../Base/Errors/ResourceNotFound';
 import Api from 'AppData/api';
 import Resource from './Resource';
 import { Progress } from 'AppComponents/Shared';
-import ApiPermissionValidation from 'AppData/ApiPermissionValidation';
 import Configurations from '../../../../../../../site/public/theme/defaultTheme';
 
 const styles = theme => ({
@@ -136,6 +135,7 @@ class Resources extends React.Component {
             notFound: false,
             showAddResource: false,
             showScopes: false,
+            isAuthorize: true,
         };
         this.api = new Api();
         this.api_uuid = props.api.id;
