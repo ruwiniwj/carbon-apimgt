@@ -17,6 +17,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 // import qs from 'qs';
 import PropTypes from 'prop-types';
+import Configurations from '../../../../../../../site/public/theme/defaultTheme';
 
 const styles = theme => ({
     profileMenu: {
@@ -73,7 +74,7 @@ class Avatar extends Component {
      */
     doOIDCLogout = (e) => {
         e.preventDefault();
-        window.location = '/publisher-new/services/logout';
+        window.location = '/' + Configurations.context + '/services/logout';
     };
 
     /**

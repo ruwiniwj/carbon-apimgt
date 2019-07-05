@@ -22,6 +22,7 @@ import Utils from './Utils';
 import User from './User';
 import APIClient from './APIClient';
 import APIClientFactory from './APIClientFactory';
+import Configurations from '../../../../site/public/theme/defaultTheme';
 
 /**
  * Class managing authentication
@@ -113,7 +114,10 @@ class AuthManager {
         if (!partialToken) {
             return new Promise((resolve, reject) => reject(new Error('No partial token found!')));
         }
-        const promisedResponse = fetch('/publisher-new/services/auth/introspect', { credentials: 'same-origin' });
+        const promisedResponse = fetch(
+            '/' + Configurations.context + '/services/auth/introspect',
+            { credentials: 'same-origin' }
+        );
         return promisedResponse
             .then(response => response.json())
             .then((data) => {
@@ -318,7 +322,7 @@ class AuthManager {
      * @returns {Promise} Axios Promise object with the login request made
      */
     postAuthenticationRequest(headers, data, environment) {
-        const promisedResponse = axios('/publisher-new/services/auth/basic', {
+        const promisedResponse = axios('/' + Configurations.context + '/services/auth/basic', {
             method: 'POST',
             data: qs.stringify(data),
             headers,

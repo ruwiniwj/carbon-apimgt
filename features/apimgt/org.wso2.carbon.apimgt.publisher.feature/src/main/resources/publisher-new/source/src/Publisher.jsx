@@ -27,6 +27,7 @@ import Progress from 'AppComponents/Shared/Progress';
 import PublisherRootErrorBoundary from 'AppComponents/Shared/PublisherRootErrorBoundary';
 // Localization
 import { IntlProvider, addLocaleData, defineMessages } from 'react-intl';
+import Configurations from '../../site/public/theme/defaultTheme';
 
 const LoadableProtectedApp = Loadable({
     loader: () =>
@@ -159,12 +160,12 @@ class Publisher extends React.Component {
             return <Progress />;
         }
         if (!user) {
-            window.location = '/publisher-new/services/auth/login';
+            window.location = '/' + Configurations.context + '/services/auth/login';
         }
         return (
             <IntlProvider locale={language} messages={this.state.messages}>
                 <PublisherRootErrorBoundary appName='Publisher Application'>
-                    <Router basename='/publisher-new'>
+                    <Router basename={'/' + Configurations.context}>
                         <Switch>
                             <Redirect exact from='/login' to='/apis' />
                             <Route path='/logout' component={Logout} />

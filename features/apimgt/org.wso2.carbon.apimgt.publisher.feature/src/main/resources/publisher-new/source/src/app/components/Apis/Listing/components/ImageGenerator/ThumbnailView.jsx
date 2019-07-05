@@ -45,6 +45,7 @@ import MaterialIcons from 'MaterialIcons';
 import Alert from 'AppComponents/Shared/Alert';
 import ImageGenerator from './ImageGenerator';
 import Background from './Background';
+import Configurations from '../../../../../../../../site/public/theme/defaultTheme';
 
 const windowURL = window.URL || window.webkitURL;
 const styles = theme => ({
@@ -442,7 +443,8 @@ class ThumbnailView extends Component {
                                             src={
                                                 file && file.length > 0
                                                     ? file[0].preview
-                                                    : '/publisher-new/site/public/images/api/api-default.png'
+                                                    : '/' + Configurations.context +
+                                                    '/site/public/images/api/api-default.png'
                                             }
                                             alt='Thumbnail Preview'
                                         />

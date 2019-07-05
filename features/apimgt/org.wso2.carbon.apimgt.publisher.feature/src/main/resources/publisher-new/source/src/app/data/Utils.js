@@ -17,6 +17,7 @@
  */
 
 import Axios from 'axios';
+import Configurations from '../../../../site/public/theme/defaultTheme';
 
 /**
  * Utility class for Publisher application
@@ -243,13 +244,13 @@ class Utils {
 
 Utils.CONST = {
     LOCAL_STORAGE_ENVIRONMENT: 'environment_publisher',
-    DCR_APP_INFO: '/publisher-new/site/public/theme/temporary_login_config.json',
+    DCR_APP_INFO: '/' + Configurations.context + '/site/public/theme/temporary_login_config.json',
     MULTI_ENVIRONMENT_OVERVIEW_ENABLED: 'multi_env_overview',
     LOGOUT: '/login/logout',
     LOGIN_TOKEN_PATH: '/login/token',
     SWAGGER_YAML: '/api/am/publisher/v1.0/swagger.yaml',
     PROTOCOL: 'https://',
-    CONTEXT_PATH: '/publisher-new',
+    CONTEXT_PATH: '/' + Configurations.context,
 };
 
 /**

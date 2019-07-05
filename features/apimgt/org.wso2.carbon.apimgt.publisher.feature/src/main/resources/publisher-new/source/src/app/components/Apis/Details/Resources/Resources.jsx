@@ -46,6 +46,7 @@ import Api from 'AppData/api';
 import Resource from './Resource';
 import { Progress } from 'AppComponents/Shared';
 import ApiPermissionValidation from 'AppData/ApiPermissionValidation';
+import Configurations from '../../../../../../../site/public/theme/defaultTheme';
 
 const styles = theme => ({
     root: {
@@ -498,7 +499,7 @@ class Resources extends React.Component {
         const { api, showAddResource, apiScopes, showScopes, isAuthorize } = this.state;
 
         if (!isAuthorize) {
-            window.location = '/publisher-new/services/auth/login';
+            window.location = '/' + Configurations.context + '/services/auth/login';
         }
         if (this.state.notFound) {
             return <ResourceNotFound message={this.props.resourceNotFountMessage} />;

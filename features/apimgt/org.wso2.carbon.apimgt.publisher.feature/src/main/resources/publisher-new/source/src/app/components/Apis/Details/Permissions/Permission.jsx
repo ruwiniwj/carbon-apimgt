@@ -27,6 +27,7 @@ import { Progress } from 'AppComponents/Shared';
 import ResourceNotFound from 'AppComponents/Base/Errors/ResourceNotFound';
 import ApiPermissionValidation from 'AppData/ApiPermissionValidation';
 import { ScopeValidation, resourceMethod, resourcePath } from 'AppData/ScopeValidation';
+import Configurations from '../../../../../../../site/public/theme/defaultTheme';
 
 class Permission extends Component {
     constructor(props) {
@@ -425,7 +426,7 @@ class Permission extends Component {
                                 <img
                                     alt='API thumb'
                                     width='100%'
-                                    src='/publisher-new/site/public/images/api/api-default.png'
+                                    src={'/' + Configurations.context + '/site/public/images/api/api-default.png'}
                                 />
                             </div>
                             <div className='custom-card'>
