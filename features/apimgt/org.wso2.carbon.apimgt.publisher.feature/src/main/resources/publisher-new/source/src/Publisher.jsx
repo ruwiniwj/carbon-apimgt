@@ -160,12 +160,12 @@ class Publisher extends React.Component {
             return <Progress />;
         }
         if (!user) {
-            window.location = '/' + Configurations.context + '/services/auth/login';
+            window.location = Configurations.context + '/services/auth/login';
         }
         return (
             <IntlProvider locale={language} messages={this.state.messages}>
                 <PublisherRootErrorBoundary appName='Publisher Application'>
-                    <Router basename={'/' + Configurations.context}>
+                    <Router basename={Configurations.context}>
                         <Switch>
                             <Redirect exact from='/login' to='/apis' />
                             <Route path='/logout' component={Logout} />

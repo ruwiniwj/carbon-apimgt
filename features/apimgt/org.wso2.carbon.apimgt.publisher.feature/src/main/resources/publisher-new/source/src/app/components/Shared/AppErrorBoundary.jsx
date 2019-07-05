@@ -124,7 +124,7 @@ class AppErrorBoundary extends React.Component {
                         <Toolbar className={classes.toolbar}>
                             <div className={classes.errorDisplay} style={{ width: '100%' }}>
                                 <div className={classes.errorDisplayContent}>
-                                    <a href={'/' + Configurations.context}>
+                                    <a href={Configurations.context}>
                                         <img src={theme.custom.logo} alt={theme.custom.title} />
                                     </a>
                                 </div>
@@ -135,12 +135,12 @@ class AppErrorBoundary extends React.Component {
                     <div className={classes.errorDisplay}>
                         <div className={classes.errorDisplayContent}>
                             <div className={classes.errorTitle}>
-                                <img src={'/' + Configurations.context + '/site/public/images/robo.png'} alt='OOPS' />
+                                <img src={Configurations.context + '/site/public/images/robo.png'} alt='OOPS' />
                                 <Typography variant='h2' gutterBottom>
                                     Something went wrong
                                 </Typography>
                             </div>
-                            <a href={'/' + Configurations.context + '/apis/'}>
+                            <a href={Configurations.context + '/apis/'}>
                                 <h3 className={classes.link}>API Listing</h3>
                             </a>
                         </div>

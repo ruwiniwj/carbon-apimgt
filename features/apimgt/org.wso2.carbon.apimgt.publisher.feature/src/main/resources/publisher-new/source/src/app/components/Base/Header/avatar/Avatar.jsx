@@ -74,7 +74,7 @@ class Avatar extends Component {
      */
     doOIDCLogout = (e) => {
         e.preventDefault();
-        window.location = '/' + Configurations.context + '/services/logout';
+        window.location = Configurations.context + '/services/logout';
     };
 
     /**

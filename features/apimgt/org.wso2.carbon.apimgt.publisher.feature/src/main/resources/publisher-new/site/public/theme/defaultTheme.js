@@ -1,5 +1,5 @@
 const Configurations = {
-    context: 'publisher-new',
+    context: '/publisher-new',
     themes: {
         light: {
             palette: {

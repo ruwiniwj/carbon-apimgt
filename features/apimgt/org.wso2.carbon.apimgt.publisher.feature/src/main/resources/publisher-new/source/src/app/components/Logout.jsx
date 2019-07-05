@@ -74,7 +74,7 @@ class Logout extends Component {
     render() {
         const { logoutSuccess } = this.state;
         if (logoutSuccess) {
-            window.location = '/' + Configurations.context + '/services/auth/login';
+            window.location = Configurations.context + '/services/auth/login';
         }
         return logoutSuccess;
     }

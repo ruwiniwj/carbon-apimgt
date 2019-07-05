@@ -499,7 +499,7 @@ class Resources extends React.Component {
         const { api, showAddResource, apiScopes, showScopes, isAuthorize } = this.state;
 
         if (!isAuthorize) {
-            window.location = '/' + Configurations.context + '/services/auth/login';
+            window.location = Configurations.context + '/services/auth/login';
         }
         if (this.state.notFound) {
             return <ResourceNotFound message={this.props.resourceNotFountMessage} />;
