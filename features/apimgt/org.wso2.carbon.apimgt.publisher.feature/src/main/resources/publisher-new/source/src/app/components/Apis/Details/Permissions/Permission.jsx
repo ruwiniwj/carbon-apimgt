@@ -426,7 +426,7 @@ class Permission extends Component {
                                 <img
                                     alt='API thumb'
                                     width='100%'
-                                    src={'/' + Configurations.context + '/site/public/images/api/api-default.png'}
+                                    src={Configurations.context + '/site/public/images/api/api-default.png'}
                                 />
                             </div>
                             <div className='custom-card'>

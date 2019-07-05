@@ -76,7 +76,7 @@ class Listing extends React.Component {
                 if (status === 404) {
                     this.setState({ notFound: true });
                 } else if (status === 401) {
-                    window.location = '/' + Configurations.context + '/services/auth/login';
+                    window.location = Configurations.context + '/services/auth/login';
                 }
             });
     }

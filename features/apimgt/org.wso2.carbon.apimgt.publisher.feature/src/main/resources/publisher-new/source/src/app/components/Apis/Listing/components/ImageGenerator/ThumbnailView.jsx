@@ -443,8 +443,7 @@ class ThumbnailView extends Component {
                                             src={
                                                 file && file.length > 0
                                                     ? file[0].preview
-                                                    : '/' + Configurations.context +
-                                                    '/site/public/images/api/api-default.png'
+                                                    : Configurations.context + '/site/public/images/api/api-default.png'
                                             }
                                             alt='Thumbnail Preview'
                                         />

@@ -115,7 +115,8 @@ class AuthManager {
             return new Promise((resolve, reject) => reject(new Error('No partial token found!')));
         }
         const promisedResponse = fetch(
-            '/' + Configurations.context + '/services/auth/introspect',
+            Configurations.context + '/services/auth/introspect',
+            // eslint-disable-next-line comma-dangle
             { credentials: 'same-origin' }
         );
         return promisedResponse
@@ -322,7 +323,7 @@ class AuthManager {
      * @returns {Promise} Axios Promise object with the login request made
      */
     postAuthenticationRequest(headers, data, environment) {
-        const promisedResponse = axios('/' + Configurations.context + '/services/auth/basic', {
+        const promisedResponse = axios(Configurations.context + '/services/auth/basic', {
             method: 'POST',
             data: qs.stringify(data),
             headers,

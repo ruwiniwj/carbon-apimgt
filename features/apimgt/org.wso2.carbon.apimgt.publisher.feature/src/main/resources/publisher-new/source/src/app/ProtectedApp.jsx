@@ -91,7 +91,7 @@ export default class Protected extends Component {
         const header = <Header avatar={<Avatar toggleTheme={this.toggleTheme} user={user} />} user={user} />;
 
         if (!user) {
-            window.location = '/' + Configurations.context + '/services/auth/login';
+            window.location = Configurations.context + '/services/auth/login';
         }
         return (
             <MuiThemeProvider theme={themes[this.state.themeIndex % 2]}>
