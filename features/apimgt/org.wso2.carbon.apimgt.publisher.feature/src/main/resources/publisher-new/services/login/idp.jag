@@ -18,7 +18,7 @@
  */
 
     var log = new Log("Services login DCR request");
-    var site = require("/site/conf/site.json");
+    var configs = require("/site/public/theme/defaultTheme.js");
     include("/services/constants.jag");
     include("/services/jagg.jag");
 
@@ -29,8 +29,8 @@
 
     var dcrUrl = MGT_TRANSPORT + HOST + ":" + getServerPort() + DCR_URL_SUFFIX;
     var authorizeEndpoint = serverUrl + AUTHORIZE_ENDPOINT_SUFFIX;
-    var loginCallbackUrl = serverUrl + site.context + LOGIN_CALLBACK_URL_SUFFIX;
-    var logoutCallbackUrl = serverUrl + site.context + LOGOUT_CALLBACK_URL_SUFFIX;
+    var loginCallbackUrl = serverUrl + configs.Configurations.context + LOGIN_CALLBACK_URL_SUFFIX;
+    var logoutCallbackUrl = serverUrl + configs.Configurations.context + LOGOUT_CALLBACK_URL_SUFFIX;
     var callbackUrl = "regexp=(" + loginCallbackUrl + "|" + logoutCallbackUrl + ")";
     var scopes = settingsResponse.data.scopes.join(" ");
     var referer = request.getHeader("Referer");
@@ -78,7 +78,7 @@
     var cookie = {
         'name': 'CLIENT_ID',
         'value': clientId,
-        'path': site.context + "/",
+        'path': configs.Configurations.context + "/",
         "HttpOnly": false,
         "secure": true,
         "maxAge": -1
