@@ -18,7 +18,7 @@
  */
 
     var log = new Log("Services login DCR request");
-    var site = require("/site/conf/site.json");
+    var config = require("/site/public/theme/defaultTheme.js");
     include("/services/constants.jag");
 
     var utils = Packages.org.wso2.carbon.apimgt.impl.utils.APIUtil;
@@ -31,8 +31,8 @@
 
     var dcrUrl = MGT_TRANSPORT + HOST + ":" + serverPort + DCR_URL_SUFFIX;
     var authorizeEndpoint = serverUrl + AUTHORIZE_ENDPOINT_SUFFIX;
-    var loginCallbackUrl = serverUrl + site.context + LOGIN_CALLBACK_URL_SUFFIX;
-    var logoutCallbackUrl = serverUrl + site.context + LOGOUT_CALLBACK_URL_SUFFIX;
+    var loginCallbackUrl = serverUrl + config.Configurations.context + LOGIN_CALLBACK_URL_SUFFIX;
+    var logoutCallbackUrl = serverUrl + config.Configurations.context + LOGOUT_CALLBACK_URL_SUFFIX;
     var callbackUrl = "regexp=(" + loginCallbackUrl + "|" + logoutCallbackUrl + ")";
     var scopes = settingsResponse.data.scopes.join(" ");
     var referer = request.getHeader("Referer");
