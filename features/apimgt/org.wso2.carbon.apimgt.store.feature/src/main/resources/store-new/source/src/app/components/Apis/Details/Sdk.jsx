@@ -32,6 +32,8 @@ import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Api from '../../../data/api';
+import Configurations from '../../../../../../site/public/theme/defaultTheme';
+
 /**
  *
  *
@@ -156,7 +158,7 @@ class Sdk extends React.Component {
                             (language, index) => index < 3 && (
                                 <Grid item xs={4}>
                                     <a onClick={event => this.handleClick(event, language)} style={{ cursor: 'pointer' }}>
-                                        <img alt={language} src={'/store-new/site/public/images/sdks/' + new String(language) + '.svg'} style={{ width: 80, height: 80, margin: 15 }} />
+                                        <img alt={language} src={Configurations.context + '/site/public/images/sdks/' + new String(language) + '.svg'} style={{ width: 80, height: 80, margin: 15 }} />
                                     </a>
                                 </Grid>
                             ),
@@ -180,8 +182,8 @@ class Sdk extends React.Component {
                                     <Card>
                                         <div>{language.toString().toUpperCase()}</div>
                                         <Divider />
-                                        <CardMedia title={language.toString().toUpperCase()} src={'/store-new/site/public/images/sdks/' + new String(language) + '.svg'}>
-                                            <img alt={language} src={'/store-new/site/public/images/sdks/' + new String(language) + '.svg'} style={{ width: '100px', height: '100px', margin: '15px' }} />
+                                        <CardMedia title={language.toString().toUpperCase()} src={Configurations.context + '/site/public/images/sdks/' + new String(language) + '.svg'}>
+                                            <img alt={language} src={Configurations.context + '/site/public/images/sdks/' + new String(language) + '.svg'} style={{ width: '100px', height: '100px', margin: '15px' }} />
                                         </CardMedia>
                                         <CardActions>
                                             <Grid container justify='center'>

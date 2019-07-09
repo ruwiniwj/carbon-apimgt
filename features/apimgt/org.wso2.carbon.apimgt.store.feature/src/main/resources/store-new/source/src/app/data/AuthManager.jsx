@@ -23,6 +23,7 @@ import Utils from './Utils';
 import User from './User';
 import APIClient from './APIClient';
 import APIClientFactory from './APIClientFactory';
+import Configurations from '../../../../site/public/theme/defaultTheme';
 
 
 /**
@@ -139,7 +140,8 @@ class AuthManager {
         if (!partialToken) {
             return new Promise((resolve, reject) => reject(new Error('No partial token found')));
         }
-        const promisedResponse = fetch('/store-new/services/auth/introspect', { credentials: 'same-origin' });
+        const promisedResponse = fetch(Configurations.context + '/services/auth/introspect',
+            { credentials: 'same-origin' });
         return promisedResponse
             .then(response => response.json())
             .then((data) => {

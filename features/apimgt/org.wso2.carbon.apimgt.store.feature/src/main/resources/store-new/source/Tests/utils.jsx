@@ -20,6 +20,7 @@ import Os from 'os';
 import AuthManager from '../src/app/data/AuthManager.jsx';
 import Utils from '../src/app/data/Utils';
 import User from '../src/app/data/User';
+import Configurations from '../../site/public/theme/defaultTheme';
 
 class TestUtils {
     static setupMockEnvironment() {
@@ -75,7 +76,7 @@ class TestUtils {
                 }
                 const { partialToken, validityPeriod } = response.data;
                 document.clearCookies();
-                Utils.setCookie(User.CONST.WSO2_AM_TOKEN_1, partialToken + WSO2_AM_TOKEN_MSF4J, validityPeriod, '/store-new');
+                Utils.setCookie(User.CONST.WSO2_AM_TOKEN_1, partialToken + WSO2_AM_TOKEN_MSF4J, validityPeriod, Configurations.context);
             },
         );
         return promisedAuth;

@@ -137,3 +137,6 @@ const Configurations = {
         },
     },
 };
+if (typeof module !== 'undefined') {
+    module.exports = Configurations; // Added for tests
+}

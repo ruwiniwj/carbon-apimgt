@@ -17,6 +17,7 @@
  */
 
 import axios from 'axios'
+import Configurations from '../../../../site/public/theme/defaultTheme';
 
 class ConfigManager {
 
@@ -56,8 +57,8 @@ class ConfigManager {
  * @type {Object}
  */
 ConfigManager.ConfigRequestPaths = {
-    ENVIRONMENT_CONFIG_PATH: '/store-new/site/public/theme/temporary_environments_config.json',
-    FEATURE_LIST_PATH: '/store-new/site/public/theme/temporary_features_config.json',
+    ENVIRONMENT_CONFIG_PATH: Configurations.context + '/site/public/theme/temporary_environments_config.json',
+    FEATURE_LIST_PATH: Configurations.context + '/site/public/theme/temporary_features_config.json',
 };
 
 /**

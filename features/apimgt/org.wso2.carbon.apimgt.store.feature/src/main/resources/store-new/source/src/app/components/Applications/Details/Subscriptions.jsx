@@ -36,6 +36,7 @@ import APIList from '../../Apis/Listing/APIList';
 import Subscription from '../../../data/Subscription';
 import Api from '../../../data/api';
 import ResourceNotFound from '../../Base/Errors/ResourceNotFound';
+import Configurations from '../../../../../../site/public/theme/defaultTheme';
 
 /**
  *
@@ -231,7 +232,7 @@ class Subscriptions extends React.Component {
         const { isAuthorize } = this.state;
 
         if (!isAuthorize) {
-            window.location = '/store-new/services/configs';
+            window.location = Configurations.context + '/services/configs';
         }
 
         const {
