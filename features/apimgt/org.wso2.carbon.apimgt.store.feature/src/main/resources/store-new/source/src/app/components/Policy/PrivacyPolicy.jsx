@@ -27,6 +27,7 @@ import { ListItemIcon } from '@material-ui/core/List';
 import Label from '@material-ui/icons/Label';
 import ToolBar from '@material-ui/core/Toolbar';
 import Footer from '../Base/Footer/Footer';
+import Configurations from '../../../../../site/public/theme/defaultTheme';
 
 const styles = {
     header: {
@@ -48,7 +49,7 @@ class PrivacyPolicy extends React.Component {
                     <AppBar position='absolute'>
                         <ToolBar>
                             <Typography variant='title' noWrap>
-                                <img src='/store-new/site/public/images/logo.png' alt='wso2-logo' />
+                                <img src={Configurations.context + '/site/public/images/logo.png'} alt='wso2-logo' />
                                 <span style={{ color: 'white' }}>API STORE</span>
                             </Typography>
                         </ToolBar>

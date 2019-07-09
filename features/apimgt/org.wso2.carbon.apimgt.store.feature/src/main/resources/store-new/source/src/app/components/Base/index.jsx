@@ -39,6 +39,7 @@ import Paper from '@material-ui/core/Paper';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import HowToReg from '@material-ui/icons/HowToReg';
 import VerticalDivider from '../Shared/VerticalDivider';
+import Configurations from '../../../../../site/public/theme/defaultTheme';
 
 const styles = theme => ({
     appBar: {
@@ -154,7 +155,7 @@ class Layout extends React.Component {
      */
     doOIDCLogout = (e) => {
         e.preventDefault();
-        window.location = '/store-new/services/logout';
+        window.location = Configurations.context + '/services/logout';
     }
 
     handleClickButton = (key) => {
@@ -298,7 +299,7 @@ class Layout extends React.Component {
                                      <HowToReg /> sign-up
                                      </Button>
                                      </Link> */}
-                                    <a href='/store-new/services/configs'>
+                                    <a href={Configurations.context + '/services/configs'}>
                                         <Button className={classes.userLink}>
                                             <Person /> Sign-in
                                         </Button>

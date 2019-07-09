@@ -18,6 +18,7 @@
 
 import React from 'react'
 import Footer from '../Footer/Footer'
+import Configurations from '../../../../../site/public/theme/defaultTheme';
 
 const LoginBase = (props) => {
     return (
@@ -25,9 +26,9 @@ const LoginBase = (props) => {
             <header className="header header-default">
                 <div className="container-fluid">
                     <div className="pull-left brand float-remove-xs text-center-xs">
-                        <a href="/store-new/">
+                        <a href={Configurations.context + '/'}>
                             <img
-                                src="/store-new/site/public/images/logo.svg"
+                                src={Configurations.context + '/site/public/images/logo.svg'}
 
                                 className="logo"/>
                               <h1>API Store</h1>

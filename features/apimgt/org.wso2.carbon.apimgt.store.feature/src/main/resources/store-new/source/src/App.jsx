@@ -25,6 +25,7 @@ import SignUp from './app/components/AnonymousView/SignUp';
 import PrivacyPolicy from './app/components/Policy/PrivacyPolicy';
 import CookiePolicy from './app/components/Policy/CookiePolicy';
 import Progress from './app/components/Shared/Progress';
+import Configurations from '../../site/public/theme/defaultTheme';
 
 const LoadableProtectedApp = Loadable({
     loader: () => import(// eslint-disable-line function-paren-newline
@@ -61,7 +62,7 @@ class Store extends React.Component {
      */
     render() {
         return (
-            <Router basename='/store-new'>
+            <Router basename={Configurations.context}>
                 <Switch>
                     <Route path='/login' render={() => <Login appName='store-new' appLabel='STORE' />} />
                     <Route path='/logout' component={Logout} />

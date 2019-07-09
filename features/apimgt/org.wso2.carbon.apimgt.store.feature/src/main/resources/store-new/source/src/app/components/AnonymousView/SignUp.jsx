@@ -39,6 +39,8 @@ import ConfigManager from '../../data/ConfigManager';
 import LoadingAnimation from '../Base/Loading/Loading';
 import API from '../../data/api';
 import Alert from '../Shared/Alert';
+import Configurations from '../../../../../site/public/theme/defaultTheme';
+
 /**
  *
  *
@@ -271,7 +273,7 @@ class SignUp extends React.Component {
                             <Grid item sm={3} xs={12}>
                                 <Grid container direction='column'>
                                     <Grid item>
-                                        <img className='brand' src='/store-new/site/public/images/logo.svg' alt='wso2-logo' />
+                                        <img className='brand' src={Configurations.context + '/site/public/images/logo.svg'} alt='wso2-logo' />
                                     </Grid>
                                     <Grid item>
                                         <Typography type='subheading' align='right' gutterBottom>

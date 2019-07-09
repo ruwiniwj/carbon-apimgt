@@ -18,6 +18,7 @@
 
 import AuthManager from "./AuthManager";
 import Axios from "axios";
+import Configurations from '../../../../site/public/theme/defaultTheme';
 
 /**
  * Utility class for Store application
@@ -214,7 +215,7 @@ Utils.CONST = {
     LOGIN_SIGN_UP_PATH: '/login/signup',
     SWAGGER_YAML: '/api/am/store/v1.0/swagger.yaml',
     PROTOCOL: 'https://',
-    CONTEXT_PATH: '/store-new',
+    CONTEXT_PATH: Configurations.context,
 };
 
 /**
