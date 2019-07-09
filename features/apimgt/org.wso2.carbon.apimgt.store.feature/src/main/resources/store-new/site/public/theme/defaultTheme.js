@@ -1,4 +1,5 @@
 const Configurations = {
+    context: '/store-new',
     themes: {
         light: {
             palette: {
@@ -36,23 +37,35 @@ const Configurations = {
                 logo: '/store-new/site/public/images/logo.png',
                 backgroundImage: '/store-new/site/public/images/back-light.png',
                 title: 'WSO2 Developer Portal',
-                defaultApiView: 'grid', // Sets the default view for the api listing page ( Other values available = 'list' )
-                showApiHelp: false, // API detials page has a right hand side panel showing it's related help. Set this to false if you want to hide it.
-                leftMenu: 'icon left', //  other values ('icon top', 'icon left', 'no icon', 'no text')
+                // Sets the default view for the api listing page ( Other values available = 'list' )
+                defaultApiView: 'grid',
+                // API detials page has a right hand side panel showing it's related help. Set this to false if
+                // you want to hide it.
+                showApiHelp: false,
+                //  other values ('icon top', 'icon left', 'no icon', 'no text')
+                leftMenu: 'icon left',
                 leftMenuIconSize: 24,
                 leftMenuIconMainSize: 52,
                 leftMenuTextStyle: 'uppercase',
                 adminRole: 'admin',
                 commentsLimit: 5,
                 maxCommentLength: 1300,
-                resourceChipColors: {get: '#02a8f4', post: '#8ac149', put: '#ff9700', delete: '#fd5621', option: '#5f7c8a', patch: '#785446', head: '#785446'},
+                resourceChipColors: {
+                    get: '#02a8f4',
+                    post: '#8ac149',
+                    put: '#ff9700',
+                    delete: '#fd5621',
+                    option: '#5f7c8a',
+                    patch: '#785446',
+                    head: '#785446',
+                },
                 imageThumbnail: {
                     width: 240,
                     contentPictureOverlap: false,
                     contentBackgroundColor: 'rgba(239, 239, 239, 0.5)',
-                    defaultApiImage: false, //put false to render the system generated and user provided image.
-                    //And put a string to render a custom image
-                }
+                    defaultApiImage: false, // put false to render the system generated and user provided image.
+                    // And put a string to render a custom image
+                },
             },
         },
         dark: {
@@ -91,23 +104,35 @@ const Configurations = {
                 logo: '/store-new/site/public/images/logo.png',
                 backgroundImage: '/store-new/site/public/images/back-light.png',
                 title: 'WSO2 Developer Portal',
-                defaultApiView: 'grid', // Sets the default view for the api listing page ( Other values available = 'list' )
-                showApiHelp: false, // API detials page has a right hand side panel showing it's related help. Set this to false if you want to hide it.
-                leftMenu: 'icon left', //  other values ('icon top', 'icon left', 'no icon', 'no text')
+                // Sets the default view for the api listing page ( Other values available = 'list' )
+                defaultApiView: 'grid',
+                // API detials page has a right hand side panel showing it's related help. Set this to false if
+                // you want to hide it.
+                showApiHelp: false,
+                //  other values ('icon top', 'icon left', 'no icon', 'no text')
+                leftMenu: 'icon left',
                 leftMenuIconSize: 24,
                 leftMenuIconMainSize: 52,
                 leftMenuTextStyle: 'uppercase',
                 adminRole: 'admin',
                 commentsLimit: 5,
                 maxCommentLength: 1300,
-                resourceChipColors: {get: '#02a8f4', post: '#8ac149', put: '#ff9700', delete: '#fd5621', option: '#5f7c8a', patch: '#785446', head: '#785446'},
+                resourceChipColors: {
+                    get: '#02a8f4',
+                    post: '#8ac149',
+                    put: '#ff9700',
+                    delete: '#fd5621',
+                    option: '#5f7c8a',
+                    patch: '#785446',
+                    head: '#785446',
+                },
                 imageThumbnail: {
                     width: 240,
                     contentPictureOverlap: false,
                     contentBackgroundColor: 'rgba(239, 239, 239, 0.5)',
-                    defaultApiImage: false, //put false to render the system generated and user provided image.
-                    //And put a string to render a custom image
-                }
+                    defaultApiImage: false, // put false to render the system generated and user provided image.
+                    // And put a string to render a custom image
+                },
             },
         },
     },
